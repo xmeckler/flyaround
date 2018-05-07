@@ -12,6 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Site
 {
+    /*
+    * Adding personal methods / variables
+    */
+
     public function __toString()
     {
         //Return the Site object with "[ICAO] - [NAME] [CITY]" format, when __toString is called.
