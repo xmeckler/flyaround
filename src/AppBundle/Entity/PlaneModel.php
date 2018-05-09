@@ -15,6 +15,11 @@ class PlaneModel
     /*
     * Adding personal methods / variables
     */
+    public function __toString()
+    {
+        //Return the Flight object with "[id] [model] [manufacturer]" format, when __toString is called.
+        return $this->id." ".$this->model." ".$this->manufacturer;
+    }
 
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="plane")
