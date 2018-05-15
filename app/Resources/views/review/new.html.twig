@@ -1,8 +1,16 @@
-{% extends "base.html.twig" %}
-
-{% block title %}AppBundle:Review:new{% endblock %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>Welcome to the Review:new page</h1>
-    {{ form(form) }}
+    <h1>Write a review</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Create" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('review_index') }}">Back to the list</a>
+        </li>
+    </ul>
 {% endblock %}
