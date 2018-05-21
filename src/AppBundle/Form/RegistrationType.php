@@ -9,13 +9,22 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class RegistrationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('firstName')->add('lastName')->add('phoneNumber')->add('birthDate')->add('creationDate')->add('note')->add('isACertifiedPilot');
+        $builder
+            ->add('firstName')
+            ->add('lastName')
+            ->add('phoneNumber')
+            ->add('birthDate')
+            ->add('creationDate', DateType::class, array('required' => false))
+            ->add('note', IntegerType::class, array('attr' => array('min' => 0, 'max' => 5, 'label' => 'Note'), 'required' => false))
+            ->add('isACertifiedPilot');
     }
 
     public function getParent()
