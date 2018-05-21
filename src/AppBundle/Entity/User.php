@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -55,50 +56,60 @@ class User extends BaseUser
      * @var string
      *
      * @ORM\Column(name="firstName", type="string", length=32)
+     *
+     * @Assert\NotNull(message="Please enter your firstname.", groups={"Registration", "Profile"})
      */
-    private $firstName;
+    protected $firstName;
 
     /**
      * @var string
      *
      * @ORM\Column(name="lastName", type="string", length=32)
+     *
+     * @Assert\NotNull(message="Please enter your lasttname.", groups={"Registration", "Profile"})
      */
-    private $lastName;
+    protected $lastName;
 
     /**
      * @var string
      *
      * @ORM\Column(name="phoneNumber", type="string", length=32)
+     *
+     * @Assert\NotNull(message="Please enter your phone number.", groups={"Registration", "Profile"})
      */
-    private $phoneNumber;
+    protected $phoneNumber;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="birthDate", type="date")
+     *
+     * @Assert\NotNull(message="Please enter your birth date.", groups={"Registration", "Profile"})
      */
-    private $birthDate;
+    protected $birthDate;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="creationDate", type="datetime")
      */
-    private $creationDate;
+    protected $creationDate;
 
     /**
      * @var int
      *
      * @ORM\Column(name="note", type="smallint")
      */
-    private $note;
+    protected $note;
 
     /**
      * @var bool
      *
      * @ORM\Column(name="isACertifiedPilot", type="boolean")
+     *
+     * @Assert\NotNull(message="Please indicate if you are a certified pilot.", groups={"Registration", "Profile"})
      */
-    private $isACertifiedPilot;
+    protected $isACertifiedPilot;
 
 
     /**
