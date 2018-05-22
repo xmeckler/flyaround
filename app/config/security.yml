@@ -43,3 +43,11 @@ security:
             - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
             - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
             - { path: ^/admin/, role: ROLE_ADMIN }
+            - { path: ^/flight, role: IS_AUTHENTICATED_FULLY }
+            - { path: ^/listing, role: IS_AUTHENTICATED_FULLY }
+            - { path: ^/planemodel, role: IS_AUTHENTICATED_FULLY }
+            - { path: ^/reservation, role: IS_AUTHENTICATED_FULLY }
+            - { path: ^/review, role: IS_AUTHENTICATED_FULLY }
+            - { path: ^/site, role: IS_AUTHENTICATED_FULLY }
+            - { path: ^/user, role: IS_AUTHENTICATED_FULLY }
+            - { path: ^/profile, role: IS_AUTHENTICATED_FULLY }
