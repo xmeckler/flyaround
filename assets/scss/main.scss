@@ -1,4 +1,2 @@
-$brand-primary: darken(#428bca, 20%);
-body{
-  color: $brand-primary;
-}
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';

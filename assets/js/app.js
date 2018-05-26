@@ -1,7 +1,8 @@
-import $ from "jquery"
+let $ = require('jquery');
+
+require('bootstrap-sass');
 
 $(document).ready(function () {
-    console.log("ok, JQuery fonctionne !");
+    $('[data-toggle="popover"]').popover();
 });
 
-console.log('Bienvenue sur WebPack!')

@@ -7,6 +7,9 @@ Encore
     .addEntry('style', './assets/scss/main.scss')
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
-    .enableSassLoader();
+    .enableSassLoader(function(sassOptions) {}, {
+        resolveUrlLoader: false
+    })
+    .autoProvidejQuery();
 
 module.exports = Encore.getWebpackConfig();
