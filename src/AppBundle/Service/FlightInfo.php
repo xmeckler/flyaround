@@ -61,4 +61,19 @@ class FlightInfo
 
         return $d;
     }
+
+    /**
+     * Calculates the approximate flight duration (h:min)
+     * according to the flight distance (km) and the plane cruise speed (km/h)
+     *
+     * @package  float $distance
+     * @param int $speed
+     * @return string
+     */
+    public function getTime($distance, $speed)
+    {
+        $hours = floor($distance/$speed);
+        $minutes = floor((fmod($distance/$speed, 1)) * 60);
+        return $hours . 'h ' . $minutes . 'min';
+    }
 }
