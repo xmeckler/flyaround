@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <div class="container">
     <h1>Flight</h1>
 
-    <table>
+    <table class="table-striped">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -33,6 +34,10 @@
                 <th>Wasdone</th>
                 <td>{% if flight.wasDone %}Yes{% else %}No{% endif %}</td>
             </tr>
+            <tr>
+                <th>Distance</th>
+                <td>{% if distance %}{{ distance|number_format(2, ',', ' ') }}{% endif %} {{ unit }}</td>
+            </tr>
         </tbody>
     </table>
 
@@ -49,4 +54,5 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+    </div>
 {% endblock %}

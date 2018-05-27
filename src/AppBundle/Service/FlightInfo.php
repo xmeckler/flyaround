@@ -47,7 +47,7 @@ class FlightInfo
         $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * sin($dLon/2) * sin($dLon/2);
         $c = 2 * asin(sqrt($a));
 
-        switch ($this->_unit) {
+        switch ($this->unit) {
             case 'km':
                 $d = $c * $earth_radius;
                 break;
