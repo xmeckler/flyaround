@@ -41,5 +41,5 @@ services:
 
     AppBundle\Service\Mailer:
         arguments:
-          $mailer: '@Swift_Mailer'
-      $templating: '@Twig_Environment'
+        $mailer: '@Swift_Mailer'
+        $templating: '@Twig_Environment'
