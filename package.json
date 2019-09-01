@@ -9,7 +9,7 @@
   "dependencies": {
     "@symfony/webpack-encore": "^0.20.1",
     "hoek": "^5.0.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "webpack-notifier": "^1.6.0"
   },
   "devDependencies": {
