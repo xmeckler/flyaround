@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.4.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.0.1"
   },
