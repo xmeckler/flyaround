@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "@symfony/webpack-encore": "^0.20.1",
+    "@symfony/webpack-encore": "^4.2.0",
     "hoek": "^5.0.3",
     "jquery": "^3.4.0",
     "webpack-notifier": "^1.6.0"
@@ -15,8 +15,8 @@
   "devDependencies": {
     "bootstrap-sass": "^3.4.1",
     "node-sass": "^4.9.0",
-    "resolve-url-loader": "^2.3.0",
-    "sass-loader": "^7.0.1"
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^13.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
